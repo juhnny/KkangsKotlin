@@ -21,7 +21,7 @@ JetBrain의 오픈소스 그룹에서 2011년 발표
 * 함수형 언어, Lambdas, Extension, Null Safety 등 최신 언어 트렌드 지원
   * Null Safety
 
-ㅁㄴㅇㄹㄴㄹㅇ
+  ㅁㄴㅇㄹㄴㄹㅇ
 
   * 확장 함수
   * 함수형 프로그래밍
