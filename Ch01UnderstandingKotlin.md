@@ -19,4 +19,11 @@ JetBrain의 오픈소스 그룹에서 2011년 발표
 (생략)
 
 * 함수형 언어, Lambdas, Extension, Null Safety 등 최신 언어 트렌드 지원
-  * ㅁㅁㅁ
+  * Null Safety
+
+ㅁㄴㅇㄹㄴㄹㅇ
+
+  * 확장 함수
+  * 함수형 프로그래밍
+  * data 클래스
+  * Immutable 변수
