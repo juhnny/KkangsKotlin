@@ -16,7 +16,7 @@
     fun sum(text : String){
         println(text)
     }
-    
+
 * 함수의 반환타입 생략 시 기본적으로 Unit 적용
 
 
