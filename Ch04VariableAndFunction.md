@@ -12,7 +12,7 @@
 * 매개변수에 var, val 선언 불가
 * 함수의 반환값이 없을 땐 Unit으로 명시
 * Unit일 경우엔 생략 가능
-    
+
     fun sum(text : String){
         println(text)
     }
