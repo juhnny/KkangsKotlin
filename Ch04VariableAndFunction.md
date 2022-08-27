@@ -13,9 +13,10 @@
 * 함수의 반환값이 없을 땐 Unit으로 명시
 * Unit일 경우엔 생략 가능
 
-      fun sum(text : String){
-          println(text)
-      }
+
+    fun sum(text : String){
+        println(text)
+    }
 
 * 함수의 반환타입 생략 시 기본적으로 Unit 적용
 
