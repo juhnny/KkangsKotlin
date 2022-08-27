@@ -22,5 +22,8 @@ fun sum(text : String){
 그 함수의 지역변수 비슷한 개념으로 이용됨. 외부에서 호출 불가. 
 * 단일표현함수(Single expression function. 말 그대로 한 줄짜리 함수)에서는 중괄호 생략 후 등호 = 사용 가능. 
 * 단일표현함수는 반환 타입도 생략 가능. 
+```kotlin
+fun sum(a: Int, b: Int) = a + b
+```
 
 ## 4.2.2 함수 오버로딩
