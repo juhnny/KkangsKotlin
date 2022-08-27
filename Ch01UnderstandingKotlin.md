@@ -21,7 +21,8 @@ JetBrain의 오픈소스 그룹에서 2011년 발표
 * 함수형 언어, Lambdas, Extension, Null Safety 등 최신 언어 트렌드 지원
   * Null Safety
 
-  ㅁㄴㅇㄹㄴㄹㅇ
+  NullPointerException 등 Null에 의해 발생하는 문제를 해결하기 위해서는 다양한 예외처리 필요. 이는 프로그램 주요 로직이 아님에도 개발코드가 지저분해지는 주범. 
+  코틀린에서는 Null 안전성을 위해 Null에 대한 다양한 처리기법 제공. 
 
   * 확장 함수
   * 함수형 프로그래밍
