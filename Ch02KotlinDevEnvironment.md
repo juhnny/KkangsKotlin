@@ -10,18 +10,17 @@ JVM 기반에서 동작하는 프로그램을 작성하려면 JDK 필요. 코틀
 IntelliJ의 gradle 버전에서 지원하는 JDK 버전도 고려 필요
 
 덧. 코틀린에서도 main()은 최상위 함수로 실행 진입점이다
+```kotlin
+fun main(args: Array<String> {
+  println("Hello World!")
+}
+```
 
 코틀린에서 main()함수는 실행 진입점입니다. 자바와 같은 객체 지향 언어에서는 프로그램을 실행하려면 최소한 하나의 클래스와 그 안에 실행할 수 있는main()함수가 있어야 합니다. 하지만 코틀린은 선언된 클래스가 없는데도 불구하고 main()메서드 하나로 println()함수를 통해 콘솔에 문자열 "Hello Kotlin"을 출력 하고 있습니다.
 
 실제로 코틀린 코드는 JVM상에서 실행하기 위해서main 메서드는 파일명을 기준으로 자동으로 클래스가 생성됩니다. 만들어진 파일은 IntelliJ IDEA의 메뉴에 [Tools → Kotlin → Show Kotlin Bytecode]를 누른 후 생성된 화면에서 [Decompile]을 사용해서 어떤 형태로 소스가 해석 되었는지를 확인해 볼 수 있습니다.
 
 출처 : https://m.boostcourse.org/mo132/lecture/59966?isDesc=false
-
-```kotlin
-fun main(args: Array<String> {
-  println("Hello World!")
-}
-```
 
 **빌드도구를 사용하지 않았을 경우의 외부 라이브러리 이용**
 IntelliJ에서 Gradle 같은 빌드도구를 사용하지 않고 프로젝트를 만들었을 경우
