@@ -38,6 +38,8 @@ IntelliJ에서 Gradle을 이용한 개발환경 구축 방법
 
 (생략)
 
+요약하면 프로젝트 생성 시 Gradle 혹은 Maven을 선택해 생성하고, 환경파일에 dependency 추가
+
 # 2.2 코틀린 개발환경 - Android Studio
 (생략)
 
