@@ -23,6 +23,7 @@ fun main(args: Array<String> {
 출처 : https://m.boostcourse.org/mo132/lecture/59966?isDesc=false
 
 **빌드도구를 사용하지 않았을 경우의 외부 라이브러리 이용**
+
 IntelliJ에서 Gradle 같은 빌드도구를 사용하지 않고 프로젝트를 만들었을 경우
 1. 프로젝트 폴더 아래 디렉토리 생성(폴더명을 lib로 예를 들면)
 2. 외부 라이브러리를 다운받아 lib 폴더에 넣기
@@ -30,9 +31,12 @@ IntelliJ에서 Gradle 같은 빌드도구를 사용하지 않고 프로젝트를
 4. 좌측 탭 중 Dependencies 선택 - '+' 버튼을 눌러 [JARs or directories] 선택 - lib 안에 넣어둔 .jar 파일 선택
 
 **빌드도구를 이용한 개발환경**
+
 IntelliJ에서 Gradle을 이용한 개발환경 구축 방법
 
 빌드도구는 개발자가 만든 코드를 컴파일하고 패키징하는 일련의 과정 수행. 또한 중요한 역할 중 하나가 라이브러리 의존성 표현. 라이브러리들을 빌드도구 환경파일에 명시하면 해당 라이브러리를 다운로드하고 의존성 설정이 자동으로 완료.
+
+(생략)
 
 # 2.2 코틀린 개발환경 - Android Studio
 (생략)
