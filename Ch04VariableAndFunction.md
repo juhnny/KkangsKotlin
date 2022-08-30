@@ -85,7 +85,7 @@ public class Test{
     }
 }
 ```
-> null/0/false  
+     null/0/false  
 
 객체는 null, 숫자 타입은 0, Boolean은 false로 초기화됨
 
