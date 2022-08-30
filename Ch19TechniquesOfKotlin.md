@@ -240,3 +240,8 @@ class Super {
 typealias MySub = Super.Sub
 ```
 
+### 더 알아볼 것
+
+Adapter 디자인 패턴
+
+클래스, 인터페이스 사용 시 body 없이 쓸 수 있는지?
