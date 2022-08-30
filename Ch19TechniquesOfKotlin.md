@@ -133,7 +133,7 @@ SAM(Single Abstract Method)는 자바 API를 코틀린에서 이용할 때 lambd
 
 ## 19.2.1. 자바에서의 인터페이스 활용
 
-Interface의 주목적은 주목적은 인터페이스를 구현하는 곳에서 추상 함수를 재정의하도로고 강제하기 위함. 
+Interface의 주목적은 주목적은 인터페이스를 구현하는 곳에서 추상 함수를 재정의하도록 강제하기 위함. 
 
 ```java
 // 자바에서 인터페이스 선언
@@ -147,9 +147,11 @@ public interface MyInterface{
 // 인터페이스 구현 객체를 등록하기 위한 setter 함수 정의
 public class Test {
   MyInterface myInterface;
+  
   public void setMyInterface(MyInterface myInterface) {
     this.myInterface = myInterface;
   }
+  // 참고로 코틀린에서는 MyInterface에 대해 자동으로 setMyInterface, getMyInterface라는 이름으로 setter, getter 메소드가 만들어지므로 개발자가 setMyInterface라는 이름의 메소드를 만들면 이름이 같아서 충돌함. 그냥 test.myInterface = MyInterface{ //내용 } 같은 식으로 써야 하는 듯.
 }
 ```
 
