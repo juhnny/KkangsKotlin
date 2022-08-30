@@ -151,7 +151,10 @@ public class Test {
   public void setMyInterface(MyInterface myInterface) {
     this.myInterface = myInterface;
   }
-  // 참고로 코틀린에서는 MyInterface에 대해 자동으로 setMyInterface, getMyInterface라는 이름으로 setter, getter 메소드가 만들어지므로 개발자가 setMyInterface라는 이름의 메소드를 만들면 이름이 같아서 충돌함. 그냥 test.myInterface = MyInterface{ //내용 } 같은 식으로 써야 하는 듯.
+  // 참고로 코틀린에서는 MyInterface에 대해 자동으로 
+  setMyInterface, getMyInterface라는 이름으로 setter, getter 메소드가 만들어지므로 
+  개발자가 setMyInterface라는 이름의 메소드를 만들면 이름이 같아서 충돌함. 
+  그냥 test.myInterface = MyInterface{ //내용 } 같은 식으로 써야 하는 듯.
 }
 ```
 
