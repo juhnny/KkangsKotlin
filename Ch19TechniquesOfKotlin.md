@@ -135,4 +135,103 @@ SAM(Single Abstract Method)는 자바 API를 코틀린에서 이용할 때 lambd
 
 Interface의 주목적은 주목적은 인터페이스를 구현하는 곳에서 추상 함수를 재정의하도로고 강제하기 위함. 
 
+```java
+// 자바에서 인터페이스 선언
+// onClickListner를 상상해보자
+public interface MyInterface{
+  fun callback();
+}
+
+// 위 인터페이스를 사용하는 클래스
+// onClickListener 등록이 가능한 View를 상상해보자
+// 인터페이스 구현 객체를 등록하기 위한 setter 함수 정의
+public class Test {
+  MyInterface myInterface;
+  public void setMyInterface(MyInterface myInterface) {
+    this.myInterface = myInterface;
+  }
+}
+```
+
+이를 Java에서 사용할 때의 모습
+
+```java
+// setter 함수를 통해 인터페이스 구현체 등록
+// View에 onClickListener를 등록하는 모습과 같다.
+Test test = new Test()
+test.setMyInterface(new MyInterface(){
+  @override
+  public void callback(){
+    system.out.println("Hello Java");
+  }
+});
+```
+
+이를 Kotlin에서 사용하는 모습. 익명 클래스를 만들어 이용
+
+```kotlin
+val test = Test()
+test.setMyInterface(object : MyInterface{
+  override fun callback() {
+    println("Hello Kotlin")
+  }
+})
+test.myInterface.callback()
+```
+
+SAM 전환을 이용하면 익명 클래스 대신 lambda로 더 짧게 만들 수 있다.
+
+```kotlin
+val test = Test()
+test.setMyInterface{ println("Hello Kotlin") }
+test.myInterface.callback()
+```
+
+람다만 전달하더라도 컴파일러가 MyInterface를 구현한 익명 클래스 객체를 만들어 줌
+
+setMyInterface()는 MyInterface를 구현한 객체를 매개변수로 받는다고 명시적으로 선언한 함수이고, MyInterface 안에는 구현할 추상 함수가 하나 뿐이므로 컴파일러가 명확히 인식할 수 있다.
+
+# 19.3. 타입 에일리어스 type alias
+
+클래스나 인터페이스의 타입 이름을 변경해 사용할 수 있다.
+
+> typealias 새 이름 = 원래 이름
+
+```kotlin
+// typealias로 타입 별명 지정
+typealias MyInt = Int
+typealias MList<T> = MutableList<T>
+typealias MI = MyInterface
+typealias MC = MyClass
+
+interface MyInterface // 왜 MI를 안 쓰고? 기존 이름도 여전히 쓸 수 있다는 걸 보여주려고? 그리고 이게 도대체 무슨 문법이지? 
+class MyClass : MI // 여기도 MC를 안 썼네. 그리고 왜 body 영역이 없지?
+
+fun main(args: Array<String>) {
+  val no: MyInt = 10
+  val list: MList<String> = mutableListOf("Hello", "Kotlin")
+  val mc: MC = MC()
+}
+```
+
+함수 타입에도 사용이 가능하다.
+
+```kotlin
+typealias MyType = (Int) -> Boolean
+val myFunction: MyType = {it > 10} // 이게 무슨 식이지? 그리고 리턴타입은 Boolean이어야 하는데?
+```
+
+inner class를 반복해 사용할 때 typealias를 사용할 수 있다. (덧. 다른 개발자에게 혼돈을 줄 수 있을지도 모르겠다)
+
+```kotlin
+class Super {
+  inner class Sub // 이렇게 body 없이도 정의가 가능했던가?
+  
+  fun getSubInstance: MySub { // MySub으로 재정의하기 전에 여기서 벌써 MySub을 쓸 수 있다고?
+    return Sub()
+  }
+}
+
+typealias MySub = Super.Sub
+```
 
